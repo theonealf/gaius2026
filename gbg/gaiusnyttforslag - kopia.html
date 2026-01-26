@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Göteborg Förr - GAIVS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons (för hamburgermenyn) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variabler för enkel anpassning */
+        :root {
+            --heading-font: 'Cormorant Garamond', serif;
+            --body-font: 'Lato', sans-serif;
+            --primary-green: #28a745; /* Från bilden */
+            --dark-text: #333;
+            --light-text: #f8f9fa;
+            --vintage-bg-1: #f5efe6; /* Simulerar första mönstret */
+            --vintage-bg-2: #f7f3e9; /* Simulerar andra mönstret */
+            --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+            --navbar-border-scrolled: #ddd;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--dark-text);
+            background-color: #ffffff;
+        }
+
+        h1, h2, h3, h4, h5, h6, .display-4, .product-title {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            transition: background-color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+        }
+
+        .navbar.transparent-nav {
+            background-color: transparent;
+        }
+        
+        .navbar.scrolled {
+            background-color: var(--navbar-bg-scrolled);
+            border-bottom: 1px solid var(--navbar-border-scrolled);
+            backdrop-filter: blur(5px);
+        }
+
+        .navbar-brand {
+            font-family: var(--heading-font);
+            font-size: 2rem;
+            font-weight: 700;
+            border: 2px solid var(--light-text);
+            padding: 0.5rem 1rem;
+        }
+        .navbar.scrolled .navbar-brand {
+            border-color: var(--dark-text);
+            color: var(--dark-text) !important;
+        }
+        
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-dark .navbar-toggler-icon {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .navbar.scrolled .navbar-toggler-icon {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 60vh;
+            min-height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('top-hero.png'); /* <-- ÄNDRA HÄR: Byt till din hero-bild */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --- Produktkort --- */
+        .product-card {
+            background-color: var(--vintage-bg-1);
+        }
+        .product-card.bg-pattern-2 {
+            background-color: var(--vintage-bg-2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .product-content {
+                padding: 3rem;
+            }
+        }
+
+        .product-title {
+            font-size: clamp(2rem, 5vw, 3rem); /* Responsiv storlek */
+            line-height: 1.1;
+        }
+
+        .btn-buy {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: #218838;
+            color: white;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-text);
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .published-since {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top transparent-nav">
+        <div class="container">
+            <a class="navbar-brand2" href="#"><img src="gaius-logo.png" alt="GAIVS Logo"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Produkter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Om Oss</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Section -->
+        <section class="py-5">
+            <div class="container text-center">
+                <h1 class="display-4">Göteborg Förr</h1>
+                <p class="lead text-muted">Svunna miljöer från Göteborg</p>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section class="product-showcase pb-5">
+            <div class="container">
+
+                <!-- Produkt 1: Almanackan -->
+                <div class="product-card bg-pattern-1 mb-5">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="product-content text-center text-lg-start">
+                                <a href="#" class="btn-buy mb-2">Köp</a>
+                                <p class="price mb-4">259 kr</p>
+                                <h2 class="product-title">Göteborgs-Almanackan 2026</h2>
+                                <p class="my-4">En jämförelse i text och bild av ett svunnet Göteborg och den moderna staden.</p>
+                                <p class="published-since">Publicerad sedan 2001</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- ÄNDRA HÄR: Byt till din produktbild för almanackan -->
+                            <img src="https://gaius.se/wpAdmin/wp-content/uploads/2025/06/Goteborgsalmanackan2026.png" alt="Göteborgsalmanackan 2026" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produkt 2: Posters -->
+                <div class="product-card bg-pattern-2 mb-5">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                             <div class="product-content text-center text-lg-start">
+                                <a href="#" class="btn-buy mb-2">Köp</a>
+                                <p class="price mb-1">159 kr</p>
+                                <p class="price-note mb-4">Inkl. frakt</p>
+                                <h2 class="product-title">Göteborgs-Posters</h2>
+                                <p class="my-4">Vackra reproduktioner av historiska fotografier och kartor från Göteborgs arkiv. Perfekt för hemmet eller kontoret.</p>
+                             </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <!-- ÄNDRA HÄR: Byt till din produktbild för posters -->
+                           <img src="https://gaius.se/wpAdmin/wp-content/uploads/2025/06/STHLM_ALM_2026.png" alt="Historisk poster av Göteborg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <p class="m-0 text-center text-muted">&copy; 2025 GAIVS. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script för att ändra navbar-bakgrund vid scroll -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('navbar-dark', 'transparent-nav');
+                navbar.classList.add('navbar-light');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('navbar-dark', 'transparent-nav');
+                navbar.classList.remove('navbar-light');
+            }
+        });
+    </script>
+
+</body>
+</html>
