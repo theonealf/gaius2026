@@ -25,12 +25,22 @@ body {
     font-family: var(--body-font);
     color: var(--dark-text);
     background-color: var(--main-bg-color);
+    /* Svensk textavstavning och ordbrytning */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     font-family: var(--heading-font);
     font-weight: 100;
     letter-spacing: 1.5px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Main heading always in uppercase */
@@ -91,7 +101,8 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
 
 /* Navigationsmeny */
 #navbarResponsive {
-    max-width: 250px;
+    /* max-width: 180px;
+    min-width: 180px; */
     background: #e4d8c8ee;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -106,6 +117,7 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     padding: 0.5rem 0;
     transition: color 0.2s ease;
     display: block;
+    white-space: nowrap;
 }
 
 #navbarResponsive .nav-link:hover {
@@ -179,33 +191,86 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
 }
 
 .product-content {
-    padding: 2rem;
+    padding: 0.5rem;
     background: #e4d8c881;
     border-radius: .5rem;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 @media (min-width: 768px) {
     .product-content {
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+}
+
+/* @media (min-width: 992px) {
+    .product-content {
+        padding: 2rem;
+    }
+} */
+
+@media (min-width: 1400px) {
+    .product-content {
         padding: 3rem;
+        margin: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .product-content {
+        padding: 2.6rem;
     }
 }
 
 .product-title {
-    font-size: clamp(1.8rem, 4vw, 2.5rem) !important;
-    line-height: 1.2 !important;
+    font-size: clamp(1.3rem, 3.5vw, 2.5rem) !important;
+    line-height: 1.3 !important;
     margin-bottom: 1rem !important;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsiva justeringar för produkttitlar - tidigare mobilvy */
+@media (max-width: 767px) {
+    .product-title {
+        font-size: 1.4rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-title {
+        font-size: 1.6rem !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-title {
+        font-size: 2rem !important;
+    }
 }
 
 .product-description {
     font-size: 1.1rem !important;
     line-height: 1.5 !important;
     margin-bottom: 1rem !important;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .product-details {
     font-size: 1rem !important;
     line-height: 1.4 !important;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .product-content p {
@@ -445,7 +510,7 @@ footer {
     
     .product-content {
         margin: 1rem;
-        padding: 1.5rem;        
+        padding: 1.0rem;        
     }
 }
 
