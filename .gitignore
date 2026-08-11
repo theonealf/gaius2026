@@ -1,0 +1,18 @@
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor files
+.vscode/*
+!.vscode/settings.json
+*.swp
+*.swp~
+
+# Logs
+*.log
