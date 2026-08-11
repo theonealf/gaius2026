@@ -168,108 +168,27 @@
             <div class="container">
                 <h2 id="products-heading" class="sr-only">Våra Produkter</h2>
 
-        <!-- Produkt: ny bok -->
-                <article class="product-card-bok26 bg-pattern-1 mb-5" itemscope itemtype="https://schema.org/Product">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-lg-6 order-lg-2 pt-3 prodposs">
-                            <img src="https://gaius.se/wpAdmin/wp-content/uploads/2026/06/bok-sthlm2.png" 
-                                 alt="Stockholmsbilder 20 år - Historisk bok med jämförelser mellan gamla och nya Stockholm" 
-                                 class="img-fluid" 
-                                 itemprop="image">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="product-content prod-bg-text-color1 text-lg-start">
-                                <!-- Rubrik om slutsåld -->
-                                <p class="product-sold-out-notice" style="font-weight: bold !important; text-align: right !important;">
-                                   
-                                </p>
-                                
-                                <!-- Knapp och förhandsbeställningsinfo sida vid sida -->
-                                <div class="product-preorder-container">
-                                    <a href="https://gaius.se/wpAdmin/produkt/stockholmsbilder/"
-                                       class="product-preorder-button"
-                                       itemprop="url"
-                                       aria-label="Förhandsbeställ Stockholmsbilder">Förhandsbeställ och få rabatt!</a>
-                                    <div class="product-preorder-info">
-                                        <p class="product-preorder-text">
-                                            Stockholmsbilder 20 år!<br>
-                                            Alla betraktelserna samlade.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Pris -->
-                                <p class="price product-price-large" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                    <span itemprop="price">349</span> <span itemprop="priceCurrency" content="SEK">kr</span> <span class="original-price">(399 kr)</span>
-                                </p> 
-                                
-                                <!-- Produkttitel -->
-                                <h2 class="product-title product-title-2027" itemprop="name">Stockholmsbilder</h2>
-                                
-                                <!-- Beskrivning -->
-                                <p class="product-description product-description-2027" itemprop="description">
-                                    Under två decennier har Stockholmsalmanackan i bild och text 
-skildrat stadens miljöer, stämningar och människor. 
-I denna bok förenas de senaste tolv månadsbilderna med 
-samtliga 228 bilder från tidigare utgåvor.</p>
-
-                                <!-- Bokfakta -->
-                                <table class="product-specs">
-                                    <tr><td>Tryck:</td><td>4-färg</td></tr>
-                                    <tr><td>Omfång:</td><td>268 sidor</td></tr>
-                                    <tr><td>Format:</td><td>210 x 286 mm</td></tr>
-                                    <tr><td>Bindning:</td><td>Trådbunden</td></tr>
-                                </table>
-                                
-                            </div>
-                        </div>                        
-                    </div>
-                </article>
-
                 <!-- Produkt 1: Almanackan -->
                 <article class="product-card6 bg-pattern-1 mb-5" itemscope itemtype="https://schema.org/Product">
                     <div class="row g-0 align-items-center">
                         <div class="col-lg-6 order-lg-2 pt-3 prodposs">
-                            <img src="https://gaius.se/wpAdmin/wp-content/uploads/2026/01/STHLM_2027.png" 
-                                 alt="Stockholmsalmanackan 2027 - Historisk almanacka med jämförelser mellan gamla och nya Stockholm" 
+                            <img src="https://gaius.se/wpAdmin/wp-content/uploads/2025/06/STHLM_ALM_2026.png" 
+                                 alt="Stockholmsalmanackan 2026 - Historisk almanacka med jämförelser mellan gamla och nya Stockholm" 
                                  class="img-fluid" 
                                  itemprop="image">
                         </div>
                         <div class="col-lg-6">
-                            <div class="product-content prod-bg-text-color1 text-lg-start">
-                                <!-- Rubrik om slutsåld -->
-                                <p class="product-sold-out-notice">
-                                    Stockholmsalmanackan 2026 slutsåld
-                                </p>
-                                
-                                <!-- Knapp och förhandsbeställningsinfo sida vid sida -->
-                                <div class="product-preorder-container">
-                                    <a href="https://gaius.se/wpAdmin/produkt/stockholmsalmanackan-2027/"
-                                       class="product-preorder-button"
-                                       itemprop="url"
-                                       aria-label="Förhandsbeställ Stockholmsalmanackan 2027">Förhandsbeställ</a>
-                                    <div class="product-preorder-info">
-                                        <p class="product-preorder-text">
-                                            <strong>Förhandsbeställ</strong><br>
-                                            Stockholmsalmanackan 2027<br>
-                                            redan nu (lev. september)
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Pris -->
-                                <p class="price product-price-large" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="product-content prod-bg-text-color1 text-center  text-lg-start">
+                                <a href="https://gaius.se/wpAdmin/produkt/stockholmsalmanackan-2026/" 
+                                   class="btn-buy mb-2" 
+                                   itemprop="url"
+                                   aria-label="Köp Stockholmsalmanackan 2026">Köp</a>
+                                <p class="price mb-1" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                     <span itemprop="price">249</span> <span itemprop="priceCurrency" content="SEK">kr</span>
-                                </p> 
-                                
-                                <!-- Produkttitel -->
-                                <h2 class="product-title product-title-2027" itemprop="name">Stockholmsalmanackan 2027</h2>
-                                
-                                <!-- Beskrivning -->
-                                <p class="product-description product-description-2027" itemprop="description">Följ med på en fascinerande resa genom Stockholms förlorade miljöer! Se hur Slussen, Södermalm, Kungsholmen, Vasastan och andra stadsdelar har förändrats genom decennierna.</p>
-                                
-                                <!-- Publicerad sedan -->
-                                <p class="published-since">PUBLICERAD SEDAN 2006</p>
+                                </p>                                
+                                <p class="published-since">Publicerad sedan 2001</p>
+                                <h2 class="product-title" itemprop="name">Stockholmsalmanackan 2026</h2>
+                                <p class="product-description" itemprop="description">Följ med på en fascinerande reja genom Stockholms förlorade miljöer! Se hur Slussen, Södermalm, Kungsholmen, Vasastan och andra stadsdelar har förändrats genom decennierna.</p>
                             </div>
                         </div>                        
                     </div>
@@ -285,7 +204,7 @@ samtliga 228 bilder från tidigare utgåvor.</p>
                                 itemprop="image">
                         </div>
                         <div class="col-lg-6">
-                             <div class="product-content prod-bg-text-color2 text-lg-start">
+                             <div class="product-content prod-bg-text-color2 text-center text-lg-start">
                                 <a href="https://gaius.se/wpAdmin/produkt/vykortsbok-stockholm-2023/" 
                                    class="btn-buy mb-2"
                                    itemprop="url"
@@ -296,18 +215,19 @@ samtliga 228 bilder från tidigare utgåvor.</p>
                                 <h2 class="product-title" itemprop="name">Stockholmsvykort <br>- 20 olika motiv</h2>
                                 <p class="product-description" itemprop="description">Ta del av ett svunnet Stockholm genom 20 vackra, löstagbara vykort baserade på autentiska tidstypiska vykort från början av 1900-talet. Upptäck försvunna kvarter, klassiska fasader och vardagsliv från en annan tid.</p>
                             
-                                <!-- <div class="d-flex align-items-center mt-5">
+                                <div class="d-flex align-items-center mt-5">
                                     <a href="https://gaius.se/wpAdmin/produkt/erbjudande-stockholmsalmanackan-2026-vykortsbok-kopia/"
                                         class="btn-buy mb-2" itemprop="url" aria-label="Köp Stockholmsvykort">Köp med rabatt
                                     </a>
-                                    <div class="testblock ms-3">                                       
+                                    <div class="testblock ms-3">
+                                        <!-- <div class="discount-icon-red" style="float: inline-start; font-size: 3rem; padding-bottom: 1.5rem;">!</div> -->
                                         <span class="kopmedrabatt"><b>48 kr rabatt</b> vid samtidig beställning <br> av Stockholmsalmanackan.</span>
                                     </div>
                                 </div>
                                 <p class="price mb-1" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                     <span itemprop="price">360</span> <span itemprop="priceCurrency"
                                         content="SEK">kr</span>
-                                </p> -->
+                                </p>
                             </div>
                               
                         </div>
@@ -324,7 +244,7 @@ samtliga 228 bilder från tidigare utgåvor.</p>
                                  itemprop="image">
                         </div>
                         <div class="col-lg-6">
-                            <div class="product-content prod-bg-text-color3 text-lg-start">
+                            <div class="product-content prod-bg-text-color3 text-center text-lg-start">
                                 <a href="https://gaius.se/wpAdmin/produkt/tavlor-med-stockholmsmotiv/" 
                                    class="btn-buy mb-2"
                                    itemprop="url"
@@ -342,18 +262,19 @@ samtliga 228 bilder från tidigare utgåvor.</p>
                                         #3 Jutas backe (Östermalm)<br>
                                         #4 Västra Slussgatan (Slussen)</p>
                                 </div>
-                                <!-- <div class="d-flex align-items-center mt-5">
+                                <div class="d-flex align-items-center mt-5">
                                     <a href="https://gaius.se/wpAdmin/produkt/erbjudande-stockholmsposter-stockholmsalmanackan-2026/"
                                         class="btn-buy mb-2" itemprop="url" aria-label="Köp Stockholmsposters">Köp med rabatt
                                     </a>
                                     <div class="testblock ms-3">
+                                        <!-- <div class="discount-icon-red" style="float: inline-start; font-size: 3rem; padding-bottom: 1.5rem;">!</div> -->
                                         <span class="kopmedrabatt"><b>60 kr rabatt</b> vid samtidig beställning <br> av Stockholmsalmanackan.</span>
                                     </div>
                                 </div>
                                 <p class="price mb-1" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                     <span itemprop="price">388</span> <span itemprop="priceCurrency"
                                         content="SEK">kr</span>
-                                </p> -->
+                                </p>
                             </div>
                         </div>                        
                     </div>

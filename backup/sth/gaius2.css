@@ -12,8 +12,8 @@
     --light-text: #f8f9fa;
     --vintage-bg-1: #f5efe6;
     --vintage-bg-2: #f7f3e9;
-    /* --navbar-bg-scrolled: rgba(255, 255, 255, 0.95); */
-    --navbar-border-scrolled: transparent;
+    --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+    --navbar-border-scrolled: #ddd;
     --main-bg-color: #e4d8c8;
 }
 
@@ -43,48 +43,36 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     overflow-wrap: break-word;
 }
 
-/* Main heading always in uppercase */
-#main-heading {
-    text-transform: uppercase;
-}
-
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
 
 .navbar {
-    /* transition: background-color 0.4s ease-in-out, border-bottom 0.4s ease-in-out; */
-    /* background-color: var(--main-bg-color); */
-    border-bottom: 1px solid var(--navbar-border-scrolled);
+    transition: background-color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+    background-color: var(--main-bg-color);
 }
 
-/* Removed transparent-nav class styling since navbar is no longer transparent */
+.navbar.transparent-nav {
+    background-color: transparent;
+}
 
 .navbar.scrolled {
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--navbar-border-scrolled);
-    /* backdrop-filter: blur(5px); */
+    backdrop-filter: blur(5px);
 }
 
 .navbar-brand {
     font-family: var(--heading-font);
     font-size: 2rem;
     font-weight: 700;
-    border: 2px solid var(--dark-text);
+    border: 2px solid var(--light-text);
     padding: 0.5rem 1rem;
-    color: var(--dark-text) !important;
 }
 
 .navbar.scrolled .navbar-brand {
     border-color: var(--dark-text);
-    color: var(--vintage-bg-1) !important;
-}
-
-/* Navbar brand logo styling */
-.navbar-brand2 img {
-    height: 120px;
-    width: auto;
-    max-width: 150px;
+    color: var(--dark-text) !important;
 }
 
 .navbar-toggler {
@@ -96,13 +84,13 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
 }
 
 .navbar.scrolled .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Navigationsmeny */
 #navbarResponsive {
-    /* max-width: 180px;
-    min-width: 180px; */
+    max-width: 180px;
+    min-width: 180px;
     background: #e4d8c8ee;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -149,58 +137,20 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
    ========================================================================== */
 
 .hero {
-    height: 74vh;
-    min-height: 350px;
+    height: 60vh;
+    min-height: 500px;
     background-size: cover;
-    background-position: bottom center;
-    transition: height 0.4s ease;
+    background-position: center;
 }
 
 /* Hero för startsidan */
 .hero.start-page {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/gbgoco1_top.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('top-hero.png');
 }
 
 /* Hero för Stockholm */
 .hero.stockholm {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/sthlm_header-900x200.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: clamp(160px, 22vw, 280px);
-    min-height: unset;
-    transition: height 0.4s ease, background-position 0.4s ease;
-}
-
-/* Responsiva höjder för Stockholm-headern */
-@media (max-width: 575.98px) {
-    .hero.stockholm {
-        height: clamp(100px, 28vw, 160px);
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .hero.stockholm {
-        height: clamp(130px, 25vw, 190px);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .hero.stockholm {
-        height: clamp(160px, 22vw, 220px);
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1399.98px) {
-    .hero.stockholm {
-        height: clamp(180px, 20vw, 260px);
-    }
-}
-
-@media (min-width: 1400px) {
-    .hero.stockholm {
-        height: clamp(220px, 18vw, 600px);
-    }
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/gbgoco1_top.jpg');
 }
 
 /* Hero för Göteborg */
@@ -239,13 +189,12 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     .product-content {
         padding: 0.5rem;
         margin: 1rem;
-        text-align: left!important;
     }
 }
 
 @media (min-width: 992px) {
     .product-content {
-        padding: 1rem;
+        padding: 2rem;
     }
 }
 
@@ -309,7 +258,6 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
 .product-content p {
     font-size: 1.1rem;
     line-height: 1.5;
-    font-weight: 500;
 }
 
 .product-content h2 {
@@ -348,11 +296,7 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     background-position: center;
     background-size: cover;
 }
-.product-card-bok26 {
-    background: url(https://stockholmforr.se/img/STHLM_bok26_bg.jpg);
-    background-position: center;
-    background-size: cover;
-}
+
 .product-card6 {
     background: url(https://dev.frontdata.se/gaius/start4/img/STHLM_Prod_bild1_alm26_BG.jpg);
     background-position: center;
@@ -453,89 +397,15 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
 }
 
 .published-since {
-    font-size: 0.9rem !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1.5px !important;
-    color: #000 !important;
-    margin-top: 2rem !important;
-    font-family: 'Lato', sans-serif !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark-text);
 }
 
 .besk-text {
     font-size: 1.2rem;
     color: var(--dark-text);
-}
-
-/* Almanacka produktspecifika klasser */
-.product-sold-out-notice {
-    color: #dc3545 !important;
-    font-size: 1.1rem !important;
-    font-weight: normal !important;
-    margin-bottom: 1rem !important;
-    font-family: 'Lato', sans-serif !important;
-}
-
-.product-preorder-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    /* margin-bottom: 1rem; */
-    flex-wrap: wrap;
-}
-
-.product-preorder-button {
-    display: inline-block;
-    background-color: #28a745 !important;
-    color: white !important;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-       
-    flex-shrink: 0;
-    max-width: 160px;
-}
-
-.product-preorder-button:hover {
-    background-color: #218838 !important;
-    color: white !important;
-}
-
-.product-preorder-info {
-    flex: 1;
-    min-width: 200px;
-}
-
-.product-preorder-text {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem !important;
-    line-height: 1.1 !important;
-    font-family: 'Lato', sans-serif !important;
-    color: #000 !important;
-}
-
-.product-price-large {
-    font-size: 1.3rem !important;
-    font-weight: normal !important;
-    margin-bottom: 1.5rem !important;
-    color: #000 !important;
-}
-
-.product-title-2027 {
-    font-size: 2.2rem !important;
-    font-weight: normal !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.2 !important;
-    color: #000 !important;
-}
-
-.product-description-2027 {
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    color: #000 !important;
 }
 
 /* ==========================================================================
@@ -622,7 +492,7 @@ footer {
     
     .product-content {
         margin: 1rem;
-        padding: 1.5rem;        
+        padding: 1.5rem;
     }
 }
 
@@ -666,42 +536,4 @@ footer {
 /* För smooth transitions */
 .smooth-transition {
     transition: all 0.3s ease;
-}
-.product-title {
-    word-break: break-word;
-}
-
-/* Anpassning för rabatttexten på Stockholmsbilder-boken */
-.discount-image-style {
-    color: #cc0000; /* Röd färg som liknar bilden */
-    font-size: 1.1rem; /* Bibehåller storlek som .product-content p */
-    line-height: 1.5;
-    text-align: left;
-}
-
-.discount-image-style .discount-icon-red {
-    font-size: 3.4rem; /* Större utropstecken */
-    margin-right: 0.5rem;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    float: inline-start;
-}
-.testblock{
-    text-align: left;
-    line-height: 1.2;
-    padding-top: .5rem;
-}
-
-.kopmedrabatt{
-    padding-bottom: 1rem; 
-    display: block; 
-    color: #c90000; 
-    font-size:1.1rem;
-}
-
-.original-price{
-    padding-left: 0.5rem;
-    color: #c90000; 
-    font-size:1.1rem;
 }

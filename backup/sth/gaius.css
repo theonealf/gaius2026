@@ -348,11 +348,7 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     background-position: center;
     background-size: cover;
 }
-.product-card-bok26 {
-    background: url(https://stockholmforr.se/img/STHLM_bok26_bg.jpg);
-    background-position: center;
-    background-size: cover;
-}
+
 .product-card6 {
     background: url(https://dev.frontdata.se/gaius/start4/img/STHLM_Prod_bild1_alm26_BG.jpg);
     background-position: center;
@@ -488,13 +484,12 @@ h1, h2, h3, h4, h5, h6, .display-4, .product-title {
     display: inline-block;
     background-color: #28a745 !important;
     color: white !important;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 2rem;
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-       
+    white-space: nowrap;
     flex-shrink: 0;
-    max-width: 160px;
 }
 
 .product-preorder-button:hover {
@@ -696,12 +691,6 @@ footer {
 .kopmedrabatt{
     padding-bottom: 1rem; 
     display: block; 
-    color: #c90000; 
-    font-size:1.1rem;
-}
-
-.original-price{
-    padding-left: 0.5rem;
     color: #c90000; 
     font-size:1.1rem;
 }
